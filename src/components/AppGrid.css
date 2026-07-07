@@ -1,0 +1,21 @@
+.app-grid-section {
+  padding: 8px 0 96px;
+}
+
+.app-grid-section__inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 56px 24px 0;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 780px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+}

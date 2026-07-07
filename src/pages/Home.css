@@ -1,0 +1,53 @@
+.hero {
+  background:
+    radial-gradient(1200px 400px at 15% -10%, color-mix(in srgb, var(--color-primary) 16%, transparent), transparent),
+    var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero__inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 88px 24px 72px;
+  text-align: center;
+}
+
+.hero__eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.hero__inner h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+
+.hero__subtitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 18px;
+}
+
+.hero__description {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--color-text-muted);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 780px) {
+  .hero__inner {
+    padding: 64px 20px 48px;
+  }
+}

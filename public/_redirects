@@ -1,0 +1,5 @@
+# Cloudflare Pages SPA fallback.
+# Every real route is already prerendered as a static file (see scripts/prerender.mjs),
+# so this only fires for genuinely unmatched paths, letting the client-side
+# router render its own 404 page instead of Cloudflare's default.
+/*  /index.html  200
