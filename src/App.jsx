@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import AppsIndex from './pages/AppsIndex.jsx';
@@ -37,8 +37,14 @@ import SlcVetTerms from './pages/apps/slc-vet/Terms.jsx';
 import SlcVetContact from './pages/apps/slc-vet/Contact.jsx';
 
 export default function App() {
+
+  const Router =
+  window.location.hostname.includes('github.io')
+    ? HashRouter
+    : BrowserRouter;
+
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -84,6 +90,6 @@ export default function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
