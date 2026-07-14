@@ -38,13 +38,10 @@ import SlcVetContact from './pages/apps/slc-vet/Contact.jsx';
 
 export default function App() {
 
-  const Router =
-  window.location.hostname.includes('github.io')
-    ? HashRouter
-    : BrowserRouter;
+  const Router = BrowserRouter;
 
   return (
-    <Router>
+    <Router basename="/SLC-Apps">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
