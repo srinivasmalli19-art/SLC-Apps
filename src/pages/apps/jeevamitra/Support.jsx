@@ -46,6 +46,14 @@ export default function Support() {
             </details>
           ))}
         </div>
+
+        <h3>Related pages</h3>
+        <p>
+          Read our <Link to="/apps/jeevamitra/privacy-policy">Privacy Policy</Link> to learn how
+          your data is handled, or visit{' '}
+          <Link to="/apps/jeevamitra/delete-account">Delete Your Account</Link> to request account
+          deletion.
+        </p>
       </div>
     </section>
   );

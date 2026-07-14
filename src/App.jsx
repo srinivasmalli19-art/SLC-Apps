@@ -25,6 +25,7 @@ import JeevaMitraAbout from './pages/apps/jeevamitra/About.jsx';
 import JeevaMitraFeatures from './pages/apps/jeevamitra/Features.jsx';
 import JeevaMitraPrivacyPolicy from './pages/apps/jeevamitra/PrivacyPolicy.jsx';
 import JeevaMitraSupport from './pages/apps/jeevamitra/Support.jsx';
+import JeevaMitraDeleteAccount from './pages/apps/jeevamitra/DeleteAccount.jsx';
 import JeevaMitraTerms from './pages/apps/jeevamitra/Terms.jsx';
 import JeevaMitraContact from './pages/apps/jeevamitra/Contact.jsx';
 
@@ -67,6 +68,7 @@ export default function App() {
           <Route path="features" element={<JeevaMitraFeatures />} />
           <Route path="privacy-policy" element={<JeevaMitraPrivacyPolicy />} />
           <Route path="support" element={<JeevaMitraSupport />} />
+          <Route path="delete-account" element={<JeevaMitraDeleteAccount />} />
           <Route path="terms" element={<JeevaMitraTerms />} />
           <Route path="contact" element={<JeevaMitraContact />} />
         </Route>

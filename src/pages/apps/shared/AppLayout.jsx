@@ -13,6 +13,7 @@ export default function AppLayout({ appId }) {
     { to: `${base}/features`, label: 'Features' },
     { to: `${base}/privacy-policy`, label: 'Privacy Policy' },
     { to: `${base}/support`, label: 'Support' },
+    ...(app.extraTabs || []).map((tab) => ({ to: `${base}/${tab.path}`, label: tab.label })),
     { to: `${base}/terms`, label: 'Terms & Conditions' },
     { to: `${base}/contact`, label: 'Contact' },
   ];

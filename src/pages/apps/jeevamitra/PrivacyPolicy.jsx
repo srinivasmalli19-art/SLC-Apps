@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../shared/AppPages.css';
 
 const EFFECTIVE_DATE = 'July 7, 2026';
@@ -140,6 +141,13 @@ export default function PrivacyPolicy() {
         <p>
           Questions about this policy or how JeevaMitra handles data? Email us at{' '}
           <a href="mailto:support@slcvet.com">support@slcvet.com</a>.
+        </p>
+
+        <h3>Related pages</h3>
+        <p>
+          Visit <Link to="/apps/jeevamitra/support">Support</Link> for common questions, or{' '}
+          <Link to="/apps/jeevamitra/delete-account">Delete Your Account</Link> to request removal
+          of your account and data.
         </p>
       </div>
     </section>

@@ -28,6 +28,8 @@ export const apps = [
     path: '/apps/jeevamitra/',
     icon: 'leaf',
     accent: '#3f7d3a',
+    // Optional per-app tabs shown in AppLayout in addition to the standard set.
+    extraTabs: [{ path: 'delete-account', label: 'Delete Account' }],
   },
   {
     id: 'pasumithra',
