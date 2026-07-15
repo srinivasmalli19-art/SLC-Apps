@@ -4,7 +4,7 @@ export const COMPANY_NAME = 'SLC Technologies';
 // Every app page gets this same sub-page set — used both for routing
 // (App.jsx) and for deriving the prerender route list (scripts/prerender.mjs)
 // so a new app only needs an entry here + its 6 page files, nothing else.
-export const APP_SUB_PAGES = ['features', 'privacy-policy', 'support', 'terms', 'contact'];
+export const APP_SUB_PAGES = ['features', 'privacy-policy', 'support', 'terms', 'contact', 'delete-account'];
 
 export const apps = [
   {
