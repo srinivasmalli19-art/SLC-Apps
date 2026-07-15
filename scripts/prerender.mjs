@@ -70,7 +70,10 @@ server.stderr.on('data', (d) => (serverOutput += d.toString()));
 try {
   await waitForServer(`${BASE}/`);
 
-  const browser = await chromium.launch({ args: ['--no-sandbox'] });
+  const browser = await chromium.launch({
+  headless: true,
+  args: ['--no-sandbox', '--disable-dev-shm-usage'],
+});
   const page = await browser.newPage();
 
   for (const route of routes) {
@@ -93,5 +96,10 @@ try {
   console.error(serverOutput);
   throw err;
 } finally {
-  server.kill();
+  server.kill('SIGTERM');
+
+  await Promise.race([
+    new Promise((resolve) => server.once('exit', resolve)),
+    new Promise((resolve) => setTimeout(resolve, 5000)),
+  ]);
 }
