@@ -41,7 +41,7 @@ export default function App() {
   const Router = BrowserRouter;
 
   return (
-    <Router basename="/SLC-Apps">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
