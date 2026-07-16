@@ -96,10 +96,20 @@ try {
   console.error(serverOutput);
   throw err;
 } finally {
-  server.kill('SIGTERM');
+  try {
+    server.kill("SIGTERM");
+  } catch {}
 
-  await Promise.race([
-    new Promise((resolve) => server.once('exit', resolve)),
-    new Promise((resolve) => setTimeout(resolve, 5000)),
-  ]);
+  await new Promise((resolve) => {
+    server.once("exit", resolve);
+
+    setTimeout(() => {
+      try {
+        server.kill("SIGKILL");
+      } catch {}
+      resolve();
+    }, 2000);
+  });
+
+  process.exit(0);
 }
